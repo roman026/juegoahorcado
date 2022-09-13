@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/ahorca.js" type="text/javascript" defer></script>
+    <script src="js/palabras.js" type="text/javascript" defer></script>
+    <script src="js/script.js" type="text/javascript" defer></script>
+    <script src="js/canvas.js" type="text/javascript" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <section class="inicio" id="inicio">
+      <input
+        id="btnIniciar"
+        class="btn-iniciar"
+        type="submit"
+        value="Iniciar Juego"
+      />
+      <input
+        id="btnAgregarPalabra"
+        class="btn-agregar-palabra"
+        type="submit"
+        value="Agregar Nueva Palabra"
+      />
+
+      <p>Elige la categoria de palabras:</p>
+      <select name="" id="categoria" class="categoria">
+        <option value="alura">Palabras Alura</option>
+        <option value="frutas">Frutas</option>
+        <option value="animalesDomestico">Animales Domesticos</option>
+        <option value="vegetales">Vegetales</option>
+        <option value="partesCuerpo">Partes del cuerpo</option>
+        <option value="familia">Miembros de la Familia</option>
+        <option value="numeros">Numeros</option>
+        <option value="colores">Colores</option>
+        <option value="diasSemana">Dias de la semana</option>
+        <option value="vestimenta">Vestimenta</option>
+      </select>
+    </section>
+
+    <section id="juego" hidden>
+      <img class="logo"  src="img/Logo.png" alt="Alura logo">
+      <section class="canvas-conteiner">
+        
+        <div class="info">
+        <h3  id="mal">te qu</h3>
+        <h1  id="msg-final"></h1>
+        <h3 id="acierto">muy bien!</h3>
+        </div>
+        <canvas class="canvas" id="canvas" width="560" height="600"></canvas>
+      </section>
+      <section class="escena_juego">
+        <div class="escena">
+          <div class="escena2">
+            <div id="palabraOculta"></div>
+          </div>
+          <div class="btnJuego">
+            <button class="btnNuevo" id="btnNuevo">Palabra Nueva</button>
+            <button class="btnDesistir" id="btnDesistir">Desistir</button>
+            <button class="btnAyuda" id="btnAyuda">Dame una ayuda!</button>
+          </div>
+        </div>
+        <span class="ayuda" id="ayuda"></span>
+        <div class="container">
+          <div class="palabras">
+            <div class="palabra" id="abcdario"></div>
+        </div>
+      </section>
+    </section>
+    <footer>
+        <div class="copyright">
+         <p class="autor"> &copy; Realizado por:  <b class="usuario">Roman Romero C.</b></p>
+         <div class="redes">
+            <a href="https://github.com/roman026" target="_blank" rel="noreferrer"><iconify-icon icon="akar-icons:github-fill" width="25" height="25"></iconify-icon></a>
+            <a href="https://www.linkedin.com/in/roman026" target="_blank" rel="noreferrer"><iconify-icon icon="logos:linkedin-icon" width="25" height="25"></iconify-icon></a>
+            
+         </div>
+      </div>
+    </footer>
+  </body>
+</html>
